@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :signed_in_user, only: [:edit, :update]
-  before_action :correct_user,   only: [:edit, :update
+  before_action :correct_user,   only: [:edit, :update]
 
   def show
     @user = User.find(params[:id])
@@ -24,14 +24,14 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-    def update
-      if @user.update_attributes(user_params)
+  def update
+    if @user.update_attributes(user_params)
         flash[:success] = "Profile updated"
         redirect_to @user
-      else
+    else
         render 'edit'
-      end
     end
+  end
 
     private
 

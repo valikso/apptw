@@ -57,6 +57,6 @@ describe "edit" do
     before { click_button "Save changes" }
 
     it { should have_content('error') }
+    end
   end
-end
 end
